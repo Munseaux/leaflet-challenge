@@ -46,7 +46,7 @@ d3.json(url).then(data => {
                 fillOpacity: .5,
                 radius: mag * 50000
             }).addTo(myMap)
-            circle.bindPopup(`<h3> ${element.properties.place}</h3> <p>Date and Time: ${new Date(element.properties.time)}</p>  <p>Depth ${depth}</p> <p>Latitude: ${lat} Longitude: ${lon}</p> 
+            circle.bindPopup(`<h3> ${element.properties.place}</h3> <p>Date and Time: ${new Date(element.properties.time)}</p>  <p>Depth ${depth}km</p> <p>Latitude: ${lat} Longitude: ${lon}</p> 
                     <p>Magnitude: ${mag}</p>`); //TODO add more earthquake info 
         }
     });
@@ -59,7 +59,7 @@ d3.json(url).then(data => {
         var labels = [];
     
         // Add min & max
-        var legendInfo = "<div><h1 style=\"background-color: white\">Depth</h1>";
+        var legendInfo = "<div><h1 style=\"background-color: white\">Depth (km) </h1>";
     
         div.innerHTML = legendInfo;
     
